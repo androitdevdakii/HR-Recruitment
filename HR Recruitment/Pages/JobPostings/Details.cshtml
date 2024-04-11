@@ -1,0 +1,67 @@
+﻿@page
+@model HR_Recruitment.Pages.JobPostings.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>JobPosting</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobPosting.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobPosting.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobPosting.Overview)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobPosting.Overview)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobPosting.PayGrade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobPosting.PayGrade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobPosting.PrimaryTasks)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobPosting.PrimaryTasks)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobPosting.SecondaryTasks)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobPosting.SecondaryTasks)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobPosting.IsHrApproved)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobPosting.IsHrApproved)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobPosting.IsDirApproved)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobPosting.IsDirApproved)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobPosting.CreatedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobPosting.CreatedBy)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.JobPosting.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

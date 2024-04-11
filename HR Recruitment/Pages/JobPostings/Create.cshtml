@@ -1,0 +1,69 @@
+﻿@page
+@model HR_Recruitment.Pages.JobPostings.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>JobPosting</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="JobPosting.Title" class="control-label"></label>
+                <input asp-for="JobPosting.Title" class="form-control" />
+                <span asp-validation-for="JobPosting.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobPosting.Overview" class="control-label"></label>
+                <input asp-for="JobPosting.Overview" class="form-control" />
+                <span asp-validation-for="JobPosting.Overview" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobPosting.PayGrade" class="control-label"></label>
+                <input asp-for="JobPosting.PayGrade" class="form-control" />
+                <span asp-validation-for="JobPosting.PayGrade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobPosting.PrimaryTasks" class="control-label"></label>
+                <input asp-for="JobPosting.PrimaryTasks" class="form-control" />
+                <span asp-validation-for="JobPosting.PrimaryTasks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobPosting.SecondaryTasks" class="control-label"></label>
+                <input asp-for="JobPosting.SecondaryTasks" class="form-control" />
+                <span asp-validation-for="JobPosting.SecondaryTasks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobPosting.IsHrApproved" class="control-label"></label>
+                <input asp-for="JobPosting.IsHrApproved" class="form-control" />
+                <span asp-validation-for="JobPosting.IsHrApproved" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobPosting.IsDirApproved" class="control-label"></label>
+                <input asp-for="JobPosting.IsDirApproved" class="form-control" />
+                <span asp-validation-for="JobPosting.IsDirApproved" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobPosting.CreatedBy" class="control-label"></label>
+                <input asp-for="JobPosting.CreatedBy" class="form-control" />
+                <span asp-validation-for="JobPosting.CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
