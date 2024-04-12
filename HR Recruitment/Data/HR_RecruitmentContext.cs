@@ -15,5 +15,6 @@ namespace HR_Recruitment.Data
         }
 
         public DbSet<HR_Recruitment.Models.JobPosting> JobPosting { get; set; } = default!;
+        public DbSet<HR_Recruitment.Models.JobApplication> JobApplication { get; set; } = default!;
     }
 }

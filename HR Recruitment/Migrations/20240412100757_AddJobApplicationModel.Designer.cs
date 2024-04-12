@@ -4,6 +4,7 @@ using HR_Recruitment.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HR_Recruitment.Migrations
 {
     [DbContext(typeof(HR_RecruitmentContext))]
-    partial class HR_RecruitmentContextModelSnapshot : ModelSnapshot
+    [Migration("20240412100757_AddJobApplicationModel")]
+    partial class AddJobApplicationModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
